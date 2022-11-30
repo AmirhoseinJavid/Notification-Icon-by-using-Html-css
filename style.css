@@ -1,0 +1,53 @@
+/* General Styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins';
+    background-color: #fff3e0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* General Styles End */
+
+.icon{
+    position: relative;
+    font-size: 84px;
+    color: #282828;
+    transform-origin: top;
+    animation: anim 1s forwards;
+}
+.icon::before{
+    content: attr(data-number);
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #e3921f;
+    font-size: 17px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #fff3e0;
+    border-radius: 50%;
+}
+
+@keyframes anim{
+    10%{
+        rotate: 15deg;
+    }
+    20%{
+        rotate: -15deg;
+    }
+    30%{
+        rotate: 15deg;
+    }
+    50%{
+        rotate: 0deg;
+    }
+}
